@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<!--
+Name: Christina Jeong
+Date Created: 05/15/2019
+Most recent revision: 05/25/2019
+Purpose: Contact
+-->
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>Contact Us</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="scripts/restaurant.js"></script>
+        <style>
+            header {
+                background: red no-repeat url(images/bigpride.png) scroll center;
+                padding: 30px 10px 35px 10px;
+            }
+            header h1{
+                font-size: 60px;
+            }
+            body {
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            #sub .btn{
+                background-color: black;
+                color: white;
+                margin-top: 20px;
+            }
+            #sub .btn:hover{
+                font-weight: bold;
+            }
+            #sub .btn:active{
+                color: blue;
+            }
+            section {
+                padding-left: 6px;
+            }
+            footer {
+                margin-top: 10px;
+            }
+        </style>
+    </head> 
+    
+    <body>
+        <header>
+            <h1><strong>Contact</strong></h1>
+        </header>
+
+        <nav>
+            <a class="btn" href="index.html">Home<i class="fa fa-home"></i></a>
+            <a class="btn" href="menu.html">Menu</a>
+            <a class="btn" href="contact.html">Contact Us</a>
+        </nav>
+        
+        <div class="container-fluid">
+            <!-- Java script disabled notification -->
+            <noscript>
+                This website is best viewed with JavaScript enabled in your browser. Here are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a>.
+            </noscript>
+            <div class="row">
+                <div class="col-lg-4 col-md">
+                    <form name="myForm" action="#" method="POST" onsubmit="return validateInfo();">
+                        <label for="name"><strong>Name:</strong></label><br/>
+
+                        <input type="text" id="name" name="name" placeholder="First Last"required><br/>
+
+                        <label for="email" style="padding-top: 10px"><strong>Email:</strong></label><br/>
+
+                        <input type="text" id="email" name="email" placeholder="email@gmail.com" required><br/>
+
+                        <label for="phone" style="padding-top: 10px"><strong>Phone:</strong></label><br/>
+
+                        <input type="text" id="phone" name="phone" placeholder="123456789"required><br/>
+
+                        <label for="reason" style="padding-top: 10px; margin-bottom: 10px; margin-top: 10px"><strong>Reason for Inquiry:</strong></label><br/>
+                        <select id="reason" name="reason">
+                            <option value="party" selected>Private Party</option>
+                            <option value="feedback" selected>Feedback</option>
+                            <option value="other" selected>Other</option>
+                            <option value="default" selected>Catering</option>
+                            </select><br/>
+
+                        <label for="info" style="padding-top: 10px; margin-top: 10px"><strong>Additional Information:</strong></label><br/>
+                        <textarea name="info"></textarea><br/>
+
+                        <legend style="padding-top: 10px"><strong>Have you been to the restaurant?</strong></legend><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="choice1" name="questionnaire" value="no" checked>
+                            <label for="choice1" style="padding-left: 10px"><strong>No</strong></label>
+                        </div><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="choice2" name="questionnaire" value="yes" >
+                            <label for="choice2" style="padding-left: 10px"><strong>Yes</strong></label>
+                        </div><br/>
+
+                        <legend style="padding-top: 10px"><strong>Best days to contact you:</strong></legend><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" id="m" name="day" value="m">
+                            <label for="m" style="padding-left: 10px"><strong>Monday</strong></label>
+                        </div><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" id="t" name="day" value="t">
+                            <label for="t" style="padding-left: 10px"><strong>Tuesday</strong></label>
+                        </div><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" id="w" name="day" value="w">
+                            <label for="w" style="padding-left: 10px"><strong>Wednesday</strong></label>
+                        </div><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" id="th" name="day" value="th">
+                            <label for="th" style="padding-left: 10px"><strong>Thursday</strong></label>
+                        </div><br/>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" id="f" name="day" value="f">
+                            <label for="f" style="padding-left: 10px"><strong>Friday</strong></label>
+                        </div><br/>
+                        
+                        <div id="sub">
+                            <input type="submit" name="submit" value="Send Request" class="btn">
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="col-lg-8 col-md">
+                    <div id="news" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#news" data-slide-to="0" class="active"></li>
+                        <li data-target="#news" data-slide-to="1"></li>
+                        <li data-target="#news" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img width="300px"class="d-block w-100" src="images/bibimbap.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1><strong>We're opening a new location June 1st!</strong></h1>
+                                <h2><strong>4321 Tastey Ave., Hungry, TX, 54312</strong></h2>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img width="300px" class="d-block w-100" src="images/soup.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1><strong>We're rolling out our seasonal menu!</strong></h1>
+                                <h2><strong>Special options for this season.</strong></h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img width="300px" class="d-block w-100" src="images/soju.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1><strong>The Drink of the Month is SG Special Brew.</strong></h1>
+                            </div>
+                        </div>
+                      </div>
+                        
+                      <a class="carousel-control-prev" href="#news" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#news" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>        
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <h5>1234 Food St., Hungry, TX, 54321</h5>
+            <p>Call <strong>ILUVKIMCHI</strong> or <strong>(458)854-6244</strong> to make your reservation now!<br/>
+            &copy; 2019 Seoul Food. All rights reserved.</p>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body> 
+</html

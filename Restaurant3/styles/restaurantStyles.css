@@ -1,0 +1,55 @@
+/*
+Name: Christina Jeong
+Date Created: 05/15/2019
+Most recent revision: 05/25/2019
+Purpose: Restaurant Style Sheet
+*/
+
+header{
+    height: 180px;
+}
+header h1{
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+}
+header, footer {
+    color: white;
+    text-align: center;
+    font-family: monospace;
+}
+nav {
+    border-top: thin #5b7d87 solid;
+    border-bottom: thin #5b7d87 solid;
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-bottom: 12px;
+    font-family: 'Major Mono Display', monospace;
+    background-color: #DCDCDC;
+    margin-bottom: 16px;
+}
+nav .btn {
+    background-color: black;
+    color: white;
+}
+nav .btn:hover {
+    font-weight: bold;
+}
+nav .btn:visited {
+    color: red;
+}
+nav .btn:active {
+    color: blue;
+}
+
+body {
+    background-color: #fef9ff;
+    font-family: monospace;
+    color: #0d1f2d;
+    background-color: floralwhite;
+}
+
+footer {
+    background-color:#0047A0;
+    padding: 20px 10px 10px 10px;
+    height: 110px;
+}
