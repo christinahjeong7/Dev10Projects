@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Name: Christina Jeong
+Date Created: 05/25/2019
+Most recent revision: 05/25/2019
+Purpose: Lucky Sevens Project
+-->
+<html lang="en">
+    <head>
+        <title>Lucky Sevens</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="scripts/luckySevens.js"></script>
+        
+        <style>
+            body {
+                font-family: monospace;
+            }
+            h1 {
+                padding-top: 5%;
+                padding-bottom: 15px;
+                font-family: 'Major Mono Display', monospace;
+            }
+            h5 {
+                padding-bottom: 15px;
+                text-align: center;
+            }
+            h3 {
+                text-align: center;
+                display: none;
+            }
+            table td {
+                border: 1px solid black;
+            }
+            caption {
+                caption-side: top;
+                text-align: center;
+                font-size: 40px;
+            }
+            tbody tr:nth-child(even) { 
+                background-color: red;
+                color: white;
+            } 
+            tbody tr:nth-child(odd) { 
+                background-color: white; 
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1 style="text-align: center;">Lucky Sevens!</h1>
+        
+        <form name="luckySevens" onsubmit=" return play();" align=center>
+                
+                <label for="bet"><h5>Starting bet:</h5></label>
+                <input type="number" id="bet" placeholder="$0.00" step=.01>
+                <br>
+                
+                <div align=center>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Play!</button>
+                </div>
+            </form>
+            <br>
+        <div class="container col-4">
+
+            <table id="results" class="table table-striped" style="display:none;" align=center>
+                <caption><hr/>Results</caption>
+                <tbody>
+                    <tr>
+                        <td>Starting Bet</td>
+                        <td>$<span id="startBet"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Rolls Before Going Broke</td>
+                        <td><span id="rollsNum"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Highest Amount Won</td>
+                        <td>$<span id="rich"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Roll Count at Hightest Amount Won</td>
+                        <td><span id="maxRolls"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
